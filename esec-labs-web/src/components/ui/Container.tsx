@@ -19,10 +19,8 @@ export default function Container ({children}: {children: React.ReactNode }){
 
 				    {/* Centered nav links */}
 				    <nav className="absolute left-1/2 transform -translate-x-1/2 flex gap-x-6 font-bold">
-				      <Link href="#home">Home</Link>
-				      <Link href="#about">About</Link>
-				      <Link href="#projects">Projects</Link>
-				      <Link href="#contact">Contact</Link>
+				      <Link href="/">Home</Link>
+				      <Link href="/blog">Blog</Link>
 				    </nav>
 				  </div>
 				</header>

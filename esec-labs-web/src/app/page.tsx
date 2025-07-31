@@ -40,6 +40,14 @@ export default function Home() {
 	      {/* Card 1 */}
 	      <div className="bg-white shadow-md rounded-lg p-4 border border-gray-200 hover:bg-gray-100">
 	        <p className="text-gray-700 text-lg font-semibold">Memory dump & recovery toolkit</p>
+
+		<p className="text-gray-700 text-md py-4">Dumps detailed memory maps of microcontrollers. Filter through memory map and find desired information.</p>
+
+		<Link href="https://github.com/ESEC-Labs/Memdump">
+		      <button className="mt-6 px-6 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition cursor-pointer">
+			Github
+		      </button>	
+		</Link>
 	      </div>
 
 	      {/* Card 2 */}
