@@ -1,7 +1,11 @@
 import Container from "../../components/ui/Container";
+import { fetchBlogs } from "../../components/server/fetchBlogs";
+import Format from "../../components/ui/formatBlogs";
 import Link from "next/link";
 
-export default function Blog() {
+export default async function Blog() {
+  const data = await fetchBlogs();
+
   return (
     <div>
       <Container>
@@ -22,6 +26,10 @@ export default function Blog() {
 				/>
 			    </nav>
 		    </div>
+		  </section>
+
+		  <section className="pt-24">
+		  	<Format retrievedData={data} />
 		  </section>
 	  </div>
       </Container>
