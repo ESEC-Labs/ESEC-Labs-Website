@@ -13,7 +13,7 @@ export default function Container ({children}: {children: React.ReactNode }){
 				<header className="w-full bg-black shadow-md py-4 px-6 fixed top-0 left-0 z-50 text-white">
 				  <div className="max-w-7xl mx-auto relative flex items-center justify-start">
 				    {/* Logo on the left */}
-				    <Link href="#home" className="text-3xl font-bold">
+				    <Link href="/" className="text-3xl font-bold">
 				      ESEC
 				    </Link>
 

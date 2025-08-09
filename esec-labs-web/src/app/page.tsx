@@ -57,7 +57,7 @@ export default function Home() {
 
 	      {/* Card 3 */}
 	      <div className="bg-white shadow-md rounded-lg p-4 border border-gray-200 hover:bg-gray-100">
-	        <p className="text-gray-700 text-lg font-semibold">Coming Soon</p>
+	        <p className="text-gray-700 text-lg font-semibold">ELF Analyzer</p>
 	      </div>
 
 	      {/* Card 4 */}

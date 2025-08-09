@@ -1,26 +1,28 @@
 "use client";
 
-import { BlogData } from "../../types/index";
+import { BlogData, BlogProps } from "../../types/index"; 
+import Link from "next/link";
+import type { NextPage } from 'next'; 
 
-type Props = {
-  retrievedData: BlogData[];
-};
-
-export default function FormatBlogs({ retrievedData }: Props) {
+const FormatBlogs: NextPage<BlogProps> = ({ retrievedData }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <div className="bg-white shadow-md rounded-lg p-4 border border-gray-200 hover:bg-gray-100">
-        {retrievedData.map((item) => (
-          <div key={item.id}>
-            <p className="text-gray-700 text-lg font-semibold">{item.id}</p>
-            <p>{item.title}</p>
-            <p>{item.author}</p>
-            <p>{item.content}</p>
-            <p>{new Date(item.timestamp).toLocaleString()}</p>
-          </div>
-        ))}
+      {retrievedData.map((item) => (
+      <div key={item.id}> 
+	      <Link href={`/blog/${item.slug}`}>
+		      <div 
+			className="bg-white shadow-md rounded-lg p-4 border border-gray-200 hover:bg-gray-100 cursor-pointer">
+			    <p className="text-gray-700 text-xl font-bold">{item.title}</p>
+			    <p className="text-gray-700 text-md font-semibold">{item.author}</p>
+			    <p className="text-gray-700 text-md line-clamp-2 font-semibold">{item.content}</p>
+                	    <p className="text-gray-700 text-sm font-semibold">{new Date(item.publishedDate).toLocaleString()}</p> 
+		      </div>
+	      </Link>
       </div>
+      ))}
     </div>
   );
-}
+}; 
+
+export default FormatBlogs; 
 
