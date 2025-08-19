@@ -68,17 +68,22 @@ export default function Home() {
 	  </section>
 
 
-          {/* Contact Section */}
           <section id="contact" className="w-full max-w-3xl text-left">
-            <h2 className="text-3xl font-bold mb-4 text-black">Contact</h2>
-            <p className="text-gray-700 mb-2">Want to collaborate or learn more?</p>
-            <a
-              href="mailto:isaiahjohnson6225@gmail.com"
-              className="inline-block mt-2 px-6 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition"
-            >
-              Email Us
-            </a>
-          </section>
+		  <h2 className="text-3xl font-bold mb-4 text-black">Contact</h2>
+		  <p className="text-gray-700 mb-2">Want to collaborate or learn more?</p>
+		  <a
+		    href="mailto:isaiahjohnson6225@gmail.com"
+		    className="inline-block mt-2 px-6 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition"
+		  >
+		    Email Us
+		  </a>
+		  <a
+		    href="https://github.com/ESEC-Labs"
+		    className="inline-block mt-2 px-6 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition ml-4"
+		  >
+		    Github 
+		  </a>
+	  </section>
 
         </div>
       </Container>

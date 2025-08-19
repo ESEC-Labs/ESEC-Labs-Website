@@ -9,7 +9,7 @@ const FormatBlogs: NextPage<BlogProps> = ({ retrievedData }) => {
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {retrievedData.map((item) => (
       <div key={item.id}> 
-	      <Link href={`/blog/${item.slug}`}>
+	      <Link href={`/blog/${item.id}`}>
 		      <div 
 			className="bg-white shadow-md rounded-lg p-4 border border-gray-200 hover:bg-gray-100 cursor-pointer">
 			    <p className="text-gray-700 text-xl font-bold">{item.title}</p>
