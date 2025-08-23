@@ -7,7 +7,9 @@ import rehypeRaw from 'rehype-raw';
 
 
 export default async function BlogPage({ params }: BlogPostPageProps) {
-  const blog = await getBlogBySlug(params.slug);
+  const { slug } = await params;
+
+  const blog = await getBlogBySlug(slug);  
 
   if (!blog) {
     notFound(); 
@@ -15,10 +17,10 @@ export default async function BlogPage({ params }: BlogPostPageProps) {
 
   return (
     <Container>
-      <article className="py-12 text-black text-center bg-gray-100 rounded">
+      <article className="py-12 text-black text-center">
         {/* Header Section */}
         <section className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-2">{blog.title}</h1>
+          <h1 className="text-8xl text-gray-700 font-bold mb-2">{blog.title}</h1>
           <p className="text-lg text-gray-500">By {blog.author}</p>
         </section>
 
